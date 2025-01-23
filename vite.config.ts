@@ -1,5 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { reactRouter } from '@react-router/dev/vite';
+import tailwindcss from '@tailwindcss/vite';
 import { visualizer } from 'rollup-plugin-visualizer';
 import type { PluginOption } from 'vite';
 import { defineConfig } from 'vite';
@@ -34,6 +35,7 @@ const pwaOptions: Partial<VitePWAOptions> = {
 export default defineConfig({
   plugins: [
     reactRouter(),
+    tailwindcss(),
     checker({
       typescript: true,
       biome: true,
