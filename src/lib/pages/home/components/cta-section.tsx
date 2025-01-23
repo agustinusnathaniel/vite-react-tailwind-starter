@@ -11,7 +11,7 @@ export const CTASection = () => {
           rel="noreferrer noopener"
         >
           <img
-            className="w-23 h-8"
+            className="w-full h-8"
             src="https://vercel.com/button"
             alt="Vercel deploy button"
           />
@@ -24,7 +24,7 @@ export const CTASection = () => {
           rel="noreferrer noopener"
         >
           <img
-            className="w-23 h-8"
+            className="w-full h-8"
             src="https://www.netlify.com/img/deploy/button.svg"
             alt="Netlify deploy button"
           />
