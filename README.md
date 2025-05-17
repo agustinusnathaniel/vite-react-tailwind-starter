@@ -34,6 +34,10 @@ pnpm dev
 - build command: `pnpm build`
 - output directory: `build/client`
 
+### Vercel
+
+- https://vercel.com/docs/frameworks/react-router
+
 ## References
 
 - [vite](https://vitejs.dev)
