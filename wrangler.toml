@@ -1,2 +1,5 @@
+name = "vite-react-tailwind-starter"
+pages_build_output_dir = "./dist"
+
 [vars]
   COREPACK_INTEGRITY_KEYS="0"

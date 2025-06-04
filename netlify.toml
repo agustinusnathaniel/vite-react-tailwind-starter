@@ -5,7 +5,7 @@
 
 [build]
   command = 'pnpm build'
-  publish = 'build/client'
+  publish = 'dist'
 
 [build.environment]
   NODE_VERSION="22"

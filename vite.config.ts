@@ -1,23 +1,22 @@
-/* eslint-disable import/no-extraneous-dependencies */
-import { reactRouter } from '@react-router/dev/vite';
+import { ValidateEnv } from '@julr/vite-plugin-validate-env';
 import tailwindcss from '@tailwindcss/vite';
-import { visualizer } from 'rollup-plugin-visualizer';
-import type { PluginOption } from 'vite';
+import { TanStackRouterVite } from '@tanstack/router-plugin/vite';
+import viteReact from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import checker from 'vite-plugin-checker';
-import type { VitePWAOptions } from 'vite-plugin-pwa';
-import { VitePWA } from 'vite-plugin-pwa';
+import { VitePWA, type VitePWAOptions } from 'vite-plugin-pwa';
 import tsConfigPaths from 'vite-tsconfig-paths';
 
 const pwaOptions: Partial<VitePWAOptions> = {
   registerType: 'autoUpdate',
+  base: '/',
   manifest: {
     short_name: 'vite-react-tailwind-starter',
     name: 'Vite React App Template',
+    theme_color: '#000000',
     lang: 'en',
     start_url: '/',
     background_color: '#FFFFFF',
-    theme_color: '#FFFFFF',
     dir: 'ltr',
     display: 'standalone',
     prefer_related_applications: false,
@@ -31,19 +30,17 @@ const pwaOptions: Partial<VitePWAOptions> = {
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    reactRouter(),
+    ValidateEnv(),
+    TanStackRouterVite({ autoCodeSplitting: true }),
+    viteReact(),
     tailwindcss(),
+    tsConfigPaths(),
     checker({
       typescript: true,
       biome: true,
     }),
-    tsConfigPaths(),
-    visualizer({ template: 'sunburst' }) as unknown as PluginOption,
     VitePWA(pwaOptions),
   ],
-  ssr: {
-    noExternal: ['react-helmet-async', '@theme-toggles/react'], // temporary
-  },
   server: {
     open: true,
   },

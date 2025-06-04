@@ -1,6 +1,7 @@
 import { Classic } from '@theme-toggles/react';
+
+import { useTheme } from '@/lib/components/theme-provider';
 import '@theme-toggles/react/css/Classic.css';
-import { useTheme } from 'next-themes';
 
 export function ThemeToggle() {
   const { setTheme, theme } = useTheme();
