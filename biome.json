@@ -1,13 +1,23 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.1/schema.json",
-  "files": {
-    "include": ["src", "*.config.ts"],
-    "ignore": [".react-router", "*.d.ts", "*.css"]
+  "$schema": "https://biomejs.dev/schemas/2.0.0-beta.6/schema.json",
+  "vcs": {
+    "enabled": false,
+    "clientKind": "git",
+    "useIgnoreFile": false
   },
-  "organizeImports": {
-    "enabled": true
+  "files": {
+    "ignoreUnknown": false,
+    "includes": [
+      "src/**/*",
+      "!src/*.gen.ts",
+      "!turbo",
+      "!src/components/ui/**/*",
+      "*.config.ts",
+      "!*.css"
+    ]
   },
   "formatter": {
+    "enabled": true,
     "indentStyle": "space"
   },
   "linter": {
@@ -30,9 +40,7 @@
         "noUnusedFunctionParameters": "error",
         "useHookAtTopLevel": "error"
       },
-      "nursery": {
-        "noDuplicateElseIf": "error"
-      },
+      "nursery": {},
       "performance": {
         "noBarrelFile": "error",
         "useTopLevelRegex": "error"
@@ -56,7 +64,7 @@
         }
       },
       "suspicious": {
-        "noConsoleLog": "error",
+        "noDuplicateElseIf": "error",
         "noEmptyBlockStatements": "error",
         "useAwait": "error"
       }
@@ -69,7 +77,7 @@
   },
   "overrides": [
     {
-      "include": ["src/lib/pages/**/index.tsx", "*.ts"],
+      "includes": ["src/lib/pages/**/index.tsx", "src/*.ts", "*.ts"],
       "linter": {
         "rules": {
           "style": {
@@ -78,5 +86,24 @@
         }
       }
     }
-  ]
+  ],
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "source": {
+        "organizeImports": {
+          "level": "on",
+          "options": {
+            "groups": [
+              [":URL:", ":NODE:", ":PACKAGE:"],
+              ":BLANK_LINE:",
+              [":ALIAS:"],
+              ":BLANK_LINE:",
+              [":PATH:"]
+            ]
+          }
+        }
+      }
+    }
+  }
 }

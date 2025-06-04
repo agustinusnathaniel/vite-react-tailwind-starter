@@ -1,6 +1,3 @@
-# *
+# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Allow: /
-
-# Host
-Host: https://vite-react-tailwind-starter.sznm.dev
+Disallow:
