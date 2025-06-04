@@ -12,4 +12,4 @@ const CommitLintConfiguration = {
   },
 };
 
-module.exports = CommitLintConfiguration;
+export default CommitLintConfiguration;

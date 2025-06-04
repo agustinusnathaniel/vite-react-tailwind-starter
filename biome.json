@@ -11,7 +11,7 @@
       "src/**/*",
       "!src/*.gen.ts",
       "!turbo",
-      "!src/components/ui/**/*",
+      "!src/lib/components/ui/**/*",
       "*.config.ts",
       "!*.css"
     ]
