@@ -1,5 +1,5 @@
 {
-  "projectName": "vite-react-tailwind-v2",
+  "projectName": "vite-react-tailwind-starter",
   "mode": "file-router",
   "typescript": true,
   "tailwind": true,
