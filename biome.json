@@ -40,7 +40,6 @@
         "noUnusedFunctionParameters": "error",
         "useHookAtTopLevel": "error"
       },
-      "nursery": {},
       "performance": {
         "noBarrelFile": "error",
         "useTopLevelRegex": "error"
@@ -65,6 +64,12 @@
       },
       "suspicious": {
         "noDuplicateElseIf": "error",
+        "noConsole": {
+          "level": "error",
+          "options": {
+            "allow": ["error", "info"]
+          }
+        },
         "noEmptyBlockStatements": "error",
         "useAwait": "error"
       }
