@@ -4,7 +4,7 @@ import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
 import { Layout } from '@/lib/layout';
 
 const title = 'Vite React Tailwind Starter';
-const description = 'Meal database';
+const description = 'app starter template';
 const url = 'https://vite-react-tailwind-starter.sznm.dev';
 const ogImgUrl =
   'https://og.sznm.dev/api/generate?heading=vite-react-tailwind-starter&text=React+vite+template+with+TailwindCSS+and+TypeScript+setup.&template=color';

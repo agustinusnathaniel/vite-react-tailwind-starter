@@ -34,14 +34,14 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.6",
-    "@tanstack/react-router": "^1.114.3",
-    "@tanstack/react-router-devtools": "^1.114.3",
-    "@tanstack/router-plugin": "^1.114.3",
+    "@tanstack/react-router": "^1.121.0",
+    "@tanstack/react-router-devtools": "^1.121.0",
+    "@tanstack/router-plugin": "^1.121.0",
     "@theme-toggles/react": "^4.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwindcss": "^4.0.6",
-    "zod": "^3.25.51"
+    "zod": "^3.25.61"
   },
   "devDependencies": {
     "@biomejs/biome": "2.0.0-beta.6",
@@ -52,10 +52,10 @@
     "@tailwindcss/typography": "^0.5.16",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "^16.2.0",
-    "@types/react": "^19.0.8",
-    "@types/react-dom": "^19.0.3",
+    "@types/react": "^19.1.7",
+    "@types/react-dom": "^19.1.6",
     "@vite-pwa/assets-generator": "^1.0.0",
-    "@vitejs/plugin-react": "^4.3.4",
+    "@vitejs/plugin-react": "^4.5.2",
     "commit-and-tag-version": "^12.5.1",
     "husky": "^9.1.7",
     "jsdom": "^26.0.0",
@@ -65,7 +65,7 @@
     "vite-plugin-checker": "^0.9.3",
     "vite-plugin-pwa": "^1.0.0",
     "vite-tsconfig-paths": "^5.1.4",
-    "vitest": "^3.0.5",
-    "web-vitals": "^4.2.4"
+    "vitest": "^3.2.3",
+    "web-vitals": "^5.0.2"
   }
 }
