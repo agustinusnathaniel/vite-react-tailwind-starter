@@ -17,3 +17,7 @@ stats.*
 
 # Test
 coverage/
+
+.tanstack
+.output
+.vercel
