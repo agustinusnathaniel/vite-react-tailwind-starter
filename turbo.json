@@ -41,7 +41,7 @@
     },
     "test": {
       "outputs": [
-        "node_modules/.vite/**/results.json"
+        "node_modules/.vite/vitest/**/results.json"
       ],
       "inputs": [
         "vitest.config.ts",
