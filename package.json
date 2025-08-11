@@ -9,6 +9,7 @@
   "pnpm": {
     "onlyBuiltDependencies": [
       "@tailwindcss/oxide",
+      "esbuild",
       "sharp"
     ]
   },
@@ -34,38 +35,38 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
-    "@tanstack/react-router": "^1.127.3",
-    "@tanstack/react-router-devtools": "^1.127.3",
-    "@tanstack/router-plugin": "^1.127.5",
+    "@tanstack/react-router": "^1.131.3",
+    "@tanstack/react-router-devtools": "^1.131.3",
+    "@tanstack/router-plugin": "^1.131.3",
     "@theme-toggles/react": "^4.1.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
     "tailwindcss": "^4.1.11",
-    "zod": "^4.0.5"
+    "zod": "^4.0.17"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.1.1",
+    "@biomejs/biome": "2.1.4",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@commitlint/types": "^19.8.1",
     "@julr/vite-plugin-validate-env": "^2.2.0",
     "@tailwindcss/typography": "^0.5.16",
-    "@testing-library/dom": "^10.4.0",
+    "@testing-library/dom": "^10.4.1",
     "@testing-library/react": "^16.2.0",
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
     "@vite-pwa/assets-generator": "^1.0.0",
-    "@vitejs/plugin-react-oxc": "^0.2.3",
-    "commit-and-tag-version": "^12.5.1",
+    "@vitejs/plugin-react": "^5.0.0",
+    "commit-and-tag-version": "^12.5.2",
     "husky": "^9.1.7",
     "jsdom": "^26.0.0",
-    "lint-staged": "^16.1.2",
-    "typescript": "^5.7.2",
-    "vite": "npm:rolldown-vite@7.0.4",
-    "vite-plugin-checker": "^0.10.0",
-    "vite-plugin-pwa": "^1.0.1",
+    "lint-staged": "^16.1.5",
+    "typescript": "^5.9.2",
+    "vite": "npm:rolldown-vite@7.1.0",
+    "vite-plugin-checker": "^0.10.2",
+    "vite-plugin-pwa": "^1.0.2",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.2.4",
-    "web-vitals": "^5.0.3"
+    "web-vitals": "^5.1.0"
   }
 }
