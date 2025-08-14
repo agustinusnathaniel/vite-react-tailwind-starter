@@ -24,7 +24,7 @@
     "test": "vitest run",
     "test:ui": "vitest --ui --coverage",
     "test:coverage": "vitest --coverage run",
-    "biome:check": "biome check",
+    "biome:check": "biome check --no-errors-on-unmatched --error-on-warnings",
     "biome:fix": "pnpm biome:check --write",
     "biome:ci": "biome ci",
     "check:turbo": "pnpm turbo biome:check type:check test",

@@ -2,51 +2,26 @@
   "$schema": "https://turbo.build/schema.json",
   "tasks": {
     "type:check": {
-      "inputs": [
-        "tsconfig.json",
-        "src/**"
-      ],
-      "outputs": [
-        "*.tsbuildinfo"
-      ],
-      "env": [
-        "VITE_API_BASE_URL"
-      ]
+      "inputs": ["tsconfig.json", "src/**"],
+      "outputs": ["*.tsbuildinfo"],
+      "env": ["VITE_API_BASE_URL"]
     },
     "biome:check": {
       "outputs": [],
-      "inputs": [
-        "biome.json",
-        "src/**"
-      ]
+      "inputs": ["biome.json", "src/**"]
     },
     "biome:ci": {
       "outputs": [],
-      "inputs": [
-        "biome.json",
-        "src/**"
-      ]
+      "inputs": ["biome.json", "src/**"]
     },
     "build": {
-      "dependsOn": [
-        "type:check"
-      ],
-      "outputs": [
-        "dist/**",
-        "public/**"
-      ],
-      "env": [
-        "VITE_API_BASE_URL"
-      ]
+      "dependsOn": ["type:check"],
+      "outputs": ["dist/**", "public/**"],
+      "env": ["VITE_API_BASE_URL"]
     },
     "test": {
-      "outputs": [
-        "node_modules/.vite/vitest/**/results.json"
-      ],
-      "inputs": [
-        "vitest.config.ts",
-        "src/**"
-      ]
+      "outputs": ["node_modules/.vite/vitest/**/results.json"],
+      "inputs": ["vitest.config.ts", "src/**"]
     }
   }
 }

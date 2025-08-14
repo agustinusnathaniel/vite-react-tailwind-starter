@@ -27,7 +27,7 @@
     "noFallthroughCasesInSwitch": true,
     "types": ["vite/client"],
     "verbatimModuleSyntax": true,
-    "noUncheckedSideEffectImports": false,
+    "noUncheckedSideEffectImports": false
   },
   "include": ["src"],
   "exclude": ["node_modules"],

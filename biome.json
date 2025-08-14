@@ -13,6 +13,7 @@
       "!turbo",
       "!src/lib/components/ui/**/*",
       "*.config.ts",
+      "*.{js,ts,json,md}",
       "!*.css"
     ]
   },
