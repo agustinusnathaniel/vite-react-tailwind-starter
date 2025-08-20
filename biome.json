@@ -9,11 +9,11 @@
     "ignoreUnknown": false,
     "includes": [
       "src/**/*",
+      "*.config.ts",
+      "*.{js,ts,json,md}",
       "!src/*.gen.ts",
       "!turbo",
       "!src/lib/components/ui/**/*",
-      "*.config.ts",
-      "*.{js,ts,json,md}",
       "!*.css"
     ]
   },
