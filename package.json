@@ -5,7 +5,7 @@
   "engines": {
     "node": ">=22.16.x"
   },
-  "packageManager": "pnpm@10.7.1",
+  "packageManager": "pnpm@10.16.1",
   "pnpm": {
     "onlyBuiltDependencies": [
       "@tailwindcss/oxide",
@@ -19,7 +19,7 @@
     "build": "vite build",
     "serve": "vite preview",
     "generate-pwa-assets": "pwa-assets-generator",
-    "turbo": "pnpm dlx turbo@2.5.0",
+    "turbo": "pnpm dlx turbo@2.5.6",
     "type:check": "tsc",
     "test": "vitest run",
     "test:ui": "vitest --ui --coverage",
@@ -34,18 +34,18 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.12",
-    "@tanstack/react-router": "^1.131.28",
-    "@tanstack/react-router-devtools": "^1.131.28",
-    "@tanstack/router-plugin": "^1.131.28",
+    "@tailwindcss/vite": "^4.1.13",
+    "@tanstack/react-router": "^1.131.44",
+    "@tanstack/react-router-devtools": "^1.131.44",
+    "@tanstack/router-plugin": "^1.131.44",
     "@theme-toggles/react": "^4.1.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "tailwindcss": "^4.1.12",
-    "zod": "^4.1.5"
+    "tailwindcss": "^4.1.13",
+    "zod": "^4.1.8"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.1.4",
+    "@biomejs/biome": "2.2.4",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@commitlint/types": "^19.8.1",
@@ -53,14 +53,14 @@
     "@tailwindcss/typography": "^0.5.16",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/react": "^16.3.0",
-    "@types/react": "^19.1.12",
+    "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
-    "@vite-pwa/assets-generator": "^1.0.0",
+    "@vite-pwa/assets-generator": "^1.0.1",
     "@vitejs/plugin-react": "^5.0.2",
     "commit-and-tag-version": "^12.6.0",
     "husky": "^9.1.7",
-    "jsdom": "^26.1.0",
-    "lint-staged": "^16.1.5",
+    "jsdom": "^27.0.0",
+    "lint-staged": "^16.1.6",
     "typescript": "^5.9.2",
     "vite": "npm:rolldown-vite@7.1.2",
     "vite-plugin-checker": "^0.10.3",
