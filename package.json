@@ -31,6 +31,7 @@
     "release": "cross-env HUSKY=0 commit-and-tag-version",
     "up-interactive": "pnpm up -i",
     "up-latest": "pnpm up-interactive -L",
+    "knip": "knip",
     "prepare": "husky"
   },
   "dependencies": {
@@ -63,6 +64,7 @@
     "commit-and-tag-version": "^12.6.0",
     "husky": "^9.1.7",
     "jsdom": "^27.0.0",
+    "knip": "^5.64.3",
     "lint-staged": "^16.2.3",
     "typescript": "^5.9.3",
     "vite": "npm:rolldown-vite@7.1.16",
