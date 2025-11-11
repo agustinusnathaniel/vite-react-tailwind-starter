@@ -62,6 +62,7 @@
     "@types/react-dom": "^19.2.2",
     "@vite-pwa/assets-generator": "^1.0.2",
     "@vitejs/plugin-react": "^5.1.0",
+    "babel-plugin-react-compiler": "^1.0.0",
     "commit-and-tag-version": "^12.6.0",
     "husky": "^9.1.7",
     "jsdom": "^27.1.0",

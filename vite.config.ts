@@ -38,7 +38,11 @@ export default defineConfig(({ mode }) => {
       ValidateEnv(),
       devtools(),
       tanstackRouter({ autoCodeSplitting: true }),
-      viteReact(),
+      viteReact({
+        babel: {
+          plugins: ['babel-plugin-react-compiler'],
+        },
+      }),
       tailwindcss(),
       tsConfigPaths(),
       ...(!isCheckDisabled
