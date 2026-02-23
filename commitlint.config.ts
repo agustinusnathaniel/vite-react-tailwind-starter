@@ -7,7 +7,7 @@ const CommitLintConfiguration = {
     'scope-enum': [
       2,
       'always',
-      ['components', 'layout', 'routes', 'styles', 'utils', 'hooks'],
+      ['components', 'deps', 'layout', 'routes', 'styles', 'utils', 'hooks'],
     ],
   },
 };
