@@ -4,8 +4,8 @@ const Page404 = () => {
   return (
     <div className="grid gap-4 md:flex md:min-h-[60vh] md:items-center">
       <div className="text-center">
-        <img width={400} src="/assets/404 Error-rafiki.svg" alt="404" />
-        <a href="https://stories.freepik.com/web" className="text-xs">
+        <img alt="404" src="/assets/404 Error-rafiki.svg" width={400} />
+        <a className="text-xs" href="https://stories.freepik.com/web">
           Illustration by Freepik Stories
         </a>
       </div>

@@ -6,7 +6,6 @@ import viteReact from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import checker from 'vite-plugin-checker';
 import { VitePWA, type VitePWAOptions } from 'vite-plugin-pwa';
-import tsConfigPaths from 'vite-tsconfig-paths';
 
 const pwaOptions: Partial<VitePWAOptions> = {
   // TODO: enable if you want to enable PWA service worker
@@ -44,18 +43,20 @@ export default defineConfig(({ mode }) => {
         },
       }),
       tailwindcss(),
-      tsConfigPaths(),
-      ...(!isCheckDisabled
-        ? [
+      ...(isCheckDisabled
+        ? []
+        : [
             checker({
               typescript: true,
             }),
-          ]
-        : []),
+          ]),
       VitePWA(pwaOptions),
     ],
     server: {
       open: true,
+    },
+    resolve: {
+      tsconfigPaths: true,
     },
   };
 });

@@ -6,7 +6,7 @@
       "outputs": ["*.tsbuildinfo"],
       "env": ["VITE_API_BASE_URL"]
     },
-    "biome:check": {
+    "ultracite:check": {
       "outputs": [],
       "inputs": ["biome.json", "src/**"]
     },

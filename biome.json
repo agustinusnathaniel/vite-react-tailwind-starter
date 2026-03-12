@@ -1,20 +1,27 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.4.3/schema.json",
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "vcs": {
     "enabled": false,
     "clientKind": "git",
     "useIgnoreFile": false
   },
+  "extends": [
+    "ultracite/biome/core",
+    "ultracite/biome/react",
+    "ultracite/biome/remix"
+  ],
   "files": {
     "ignoreUnknown": false,
     "includes": [
       "src/**/*",
-      "*.config.ts",
-      "*.{js,ts,json,md}",
       "!src/*.gen.ts",
       "!turbo",
       "!src/lib/components/ui/**/*",
-      "!**/*.css"
+      "!src/lib/hooks/use-mobile.*",
+      "*.config.ts",
+      "!**/*.css",
+      "!stats.html",
+      "!test-results/*.json"
     ]
   },
   "formatter": {
@@ -25,31 +32,11 @@
     "enabled": true,
     "rules": {
       "recommended": true,
-      "a11y": {
-        "useSemanticElements": "error"
-      },
-      "complexity": {
-        "noExcessiveCognitiveComplexity": "error",
-        "noUselessStringConcat": "error",
-        "noUselessUndefinedInitialization": "error",
-        "useSimplifiedLogicExpression": "error",
-        "noVoid": "warn"
-      },
       "correctness": {
-        "noUnusedImports": "error",
-        "noUnusedVariables": "error",
-        "noUnusedFunctionParameters": "error",
-        "useHookAtTopLevel": "error"
-      },
-      "performance": {
-        "noBarrelFile": "error",
-        "useTopLevelRegex": "error"
+        "useImageSize": "off"
       },
       "style": {
-        "noDefaultExport": "error",
-        "useBlockStatements": "error",
-        "useCollapsedElseIf": "error",
-        "useDefaultSwitchClause": "error",
+        "useConsistentTypeDefinitions": "off",
         "useConsistentArrayType": {
           "level": "error",
           "options": {
@@ -62,17 +49,6 @@
             "filenameCases": ["kebab-case"]
           }
         }
-      },
-      "suspicious": {
-        "noDuplicateElseIf": "error",
-        "noConsole": {
-          "level": "error",
-          "options": {
-            "allow": ["error", "info"]
-          }
-        },
-        "noEmptyBlockStatements": "error",
-        "useAwait": "error"
       }
     }
   },
@@ -98,16 +74,6 @@
         "rules": {
           "style": {
             "useFilenamingConvention": "off"
-          }
-        }
-      }
-    },
-    {
-      "includes": ["src/**/*.d.ts"],
-      "linter": {
-        "rules": {
-          "correctness": {
-            "noUnusedVariables": "off"
           }
         }
       }

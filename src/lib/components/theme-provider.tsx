@@ -27,7 +27,7 @@ export function ThemeProvider({
   ...props
 }: Readonly<ThemeProviderProps>) {
   const [theme, setTheme] = useState<Theme>(
-    () => (localStorage.getItem(storageKey) as Theme) || defaultTheme,
+    () => (localStorage.getItem(storageKey) as Theme) || defaultTheme
   );
 
   useEffect(() => {
@@ -37,7 +37,7 @@ export function ThemeProvider({
 
     if (theme === 'system') {
       const systemTheme = globalThis.window.matchMedia(
-        '(prefers-color-scheme: dark)',
+        '(prefers-color-scheme: dark)'
       ).matches
         ? 'dark'
         : 'light';
@@ -65,7 +65,7 @@ export function ThemeProvider({
         }
       },
     }),
-    [storageKey, theme],
+    [storageKey, theme]
   );
 
   return (

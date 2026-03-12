@@ -8,12 +8,12 @@ export function ThemeToggle() {
 
   return (
     <Classic
-      toggle={(light) => setTheme(light ? 'light' : 'dark')}
-      toggled={theme === 'light'}
-      placeholder=""
       className="text-3xl"
       onPointerEnterCapture={undefined}
       onPointerLeaveCapture={undefined}
+      placeholder=""
+      toggle={(light) => setTheme(light ? 'light' : 'dark')}
+      toggled={theme === 'light'}
     />
   );
 }
