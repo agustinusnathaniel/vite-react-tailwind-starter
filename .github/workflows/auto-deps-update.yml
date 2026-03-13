@@ -26,7 +26,7 @@ jobs:
           pnpm install
           pnpm update
           pnpm dedupe
-          pnpm biome:fix
+          pnpm ultracite:fix
 
       - name: Run checks
         run: pnpm check:turbo
