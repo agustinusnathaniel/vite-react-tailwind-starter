@@ -1,11 +1,12 @@
 import { ValidateEnv } from '@julr/vite-plugin-validate-env';
+import babel from '@rolldown/plugin-babel';
 import tailwindcss from '@tailwindcss/vite';
 import { devtools } from '@tanstack/devtools-vite';
 import { tanstackRouter } from '@tanstack/router-plugin/vite';
-import viteReact from '@vitejs/plugin-react';
-import { defineConfig } from 'vite';
+import react, { reactCompilerPreset } from '@vitejs/plugin-react';
 import checker from 'vite-plugin-checker';
 import { VitePWA, type VitePWAOptions } from 'vite-plugin-pwa';
+import { defineConfig } from 'vite-plus';
 
 const pwaOptions: Partial<VitePWAOptions> = {
   // TODO: enable if you want to enable PWA service worker
@@ -33,15 +34,15 @@ const pwaOptions: Partial<VitePWAOptions> = {
 export default defineConfig(({ mode }) => {
   const isCheckDisabled = mode === 'production' || !!process.env.VITEST;
   return {
+    staged: {
+      '*.{js,jsx,ts,tsx,json,jsonc,css,scss,md,mdx}': ['ultracite fix'],
+    },
     plugins: [
       ValidateEnv(),
       devtools(),
       tanstackRouter({ autoCodeSplitting: true }),
-      viteReact({
-        babel: {
-          plugins: ['babel-plugin-react-compiler'],
-        },
-      }),
+      react(),
+      babel({ presets: [reactCompilerPreset()] }),
       tailwindcss(),
       ...(isCheckDisabled
         ? []
