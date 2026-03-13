@@ -59,5 +59,10 @@ export default defineConfig(({ mode }) => {
     resolve: {
       tsconfigPaths: true,
     },
+    test: {
+      coverage: {
+        include: ['src/utils/**/**.{ts,tsx,js,jsx}'],
+      },
+    },
   };
 });
