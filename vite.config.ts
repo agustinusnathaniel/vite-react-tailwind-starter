@@ -30,6 +30,9 @@ const pwaOptions: Partial<VitePWAOptions> = {
   },
 };
 
+const isReactCompilerEnabled =
+  process.env.VITE_PLUGIN_REACT_COMPILER === 'true';
+
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   const isCheckDisabled = mode === 'production' || !!process.env.VITEST;
@@ -42,7 +45,13 @@ export default defineConfig(({ mode }) => {
       devtools(),
       tanstackRouter({ autoCodeSplitting: true }),
       react(),
-      babel({ presets: [reactCompilerPreset()] }),
+      ...(isReactCompilerEnabled
+        ? [
+            babel({
+              presets: [reactCompilerPreset()],
+            }),
+          ]
+        : []),
       tailwindcss(),
       ...(isCheckDisabled
         ? []
