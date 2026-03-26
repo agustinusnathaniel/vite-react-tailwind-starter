@@ -1,12 +1,13 @@
 {
-  "mcpServers": {
+  "servers": {
     "ultracite": {
       "command": "npx",
       "args": ["-y", "mcp-remote", "https://docs.ultracite.ai/mcp"]
     },
     "vite-plus": {
       "command": "npx",
-      "args": ["vp", "mcp"]
+      "args": ["vp", "mcp"],
+      "type": "stdio"
     }
   }
 }
