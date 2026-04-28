@@ -6,7 +6,7 @@ import { tanstackRouter } from '@tanstack/router-plugin/vite';
 import react, { reactCompilerPreset } from '@vitejs/plugin-react';
 import checker from 'vite-plugin-checker';
 import { VitePWA, type VitePWAOptions } from 'vite-plugin-pwa';
-import { defineConfig } from 'vite-plus';
+import { defineConfig, loadEnv } from 'vite-plus';
 
 const pwaOptions: Partial<VitePWAOptions> = {
   // TODO: enable if you want to enable PWA service worker
@@ -30,12 +30,12 @@ const pwaOptions: Partial<VitePWAOptions> = {
   },
 };
 
-const isReactCompilerEnabled =
-  process.env.VITE_PLUGIN_REACT_COMPILER === 'true';
-
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   const isCheckDisabled = mode === 'production' || !!process.env.VITEST;
+  const env = loadEnv(mode, process.cwd(), '');
+  const isReactCompilerEnabled = env.ENABLE_PLUGIN_REACT_COMPILER === 'true';
+
   return {
     staged: {
       '*.{js,jsx,ts,tsx,json,jsonc,css,scss,md,mdx}': ['ultracite fix'],
