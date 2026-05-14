@@ -31,7 +31,7 @@
     "ultracite:check": "ultracite check",
     "ultracite:fix": "ultracite fix",
     "biome:ci": "biome ci",
-    "check:turbo": "pnpm turbo ultracite:check type:check test",
+    "check:turbo": "pnpm turbo ultracite:check type:check test build",
     "release": "cross-env HUSKY=0 commit-and-tag-version",
     "up-interactive": "pnpm up -i",
     "up-latest": "pnpm up-interactive -L",
