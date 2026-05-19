@@ -9,7 +9,7 @@ pkill -f "pnpm.*run dev" 2>/dev/null || true
 sleep 1
 
 logfile=$(mktemp)
-pnpm run dev > "$logfile" 2>&1 &
+pnpm run dev --no-open > "$logfile" 2>&1 &
 pid=$!
 
 server_up=false
