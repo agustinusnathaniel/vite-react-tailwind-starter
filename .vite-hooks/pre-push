@@ -1,2 +1,4 @@
 pnpm check:turbo
-[ -z "$GITHUB_ACTIONS" ] && bash scripts/dev-smoke.sh
+if [ -z "$GITHUB_ACTIONS" ]; then
+  bash scripts/dev-smoke.sh
+fi
