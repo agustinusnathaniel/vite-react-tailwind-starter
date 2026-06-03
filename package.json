@@ -35,6 +35,7 @@
     "release": "cross-env HUSKY=0 commit-and-tag-version",
     "up-interactive": "pnpm up -i",
     "up-latest": "pnpm up-interactive -L",
+    "validate:csp": "node --experimental-strip-types scripts/validate-csp.ts",
     "knip": "knip",
     "prepare": "vp config"
   },
