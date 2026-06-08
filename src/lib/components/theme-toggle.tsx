@@ -1,10 +1,9 @@
 import { Classic } from '@theme-toggles/react';
-
-import { useTheme } from '@/lib/components/theme-provider';
+import { useTheme } from 'next-themes';
 import '@theme-toggles/react/css/Classic.css';
 
 export function ThemeToggle() {
-  const { setTheme, theme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
 
   return (
     <Classic
@@ -13,7 +12,7 @@ export function ThemeToggle() {
       onPointerLeaveCapture={undefined}
       placeholder=""
       toggle={(light) => setTheme(light ? 'light' : 'dark')}
-      toggled={theme === 'light'}
+      toggled={resolvedTheme === 'light'}
     />
   );
 }
