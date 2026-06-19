@@ -6,7 +6,7 @@ import { tanstackRouter } from '@tanstack/router-plugin/vite';
 import react, { reactCompilerPreset } from '@vitejs/plugin-react';
 import checker from 'vite-plugin-checker';
 import { VitePWA, type VitePWAOptions } from 'vite-plugin-pwa';
-import { defineConfig, loadEnv } from 'vite-plus';
+import { defineConfig, lazyPlugins, loadEnv } from 'vite-plus';
 
 const pwaOptions: Partial<VitePWAOptions> = {
   // TODO: enable if you want to enable PWA service worker
@@ -50,7 +50,7 @@ export default defineConfig(({ mode }) => {
     staged: {
       '*.{js,jsx,ts,tsx,json,jsonc,css,scss,md,mdx}': ['ultracite fix'],
     },
-    plugins: [
+    plugins: lazyPlugins(() => [
       ValidateEnv(),
       devtools(),
       tanstackRouter({ autoCodeSplitting: true }),
@@ -71,7 +71,7 @@ export default defineConfig(({ mode }) => {
             }),
           ]),
       VitePWA(pwaOptions),
-    ],
+    ]),
     server: {
       open: true,
     },
