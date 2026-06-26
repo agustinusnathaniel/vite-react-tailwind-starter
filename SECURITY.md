@@ -21,19 +21,19 @@ Deployed apps include the following HTTP security headers (configured in `vercel
 
 ```
 default-src 'self';
-script-src 'self' 'unsafe-inline';
+script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' static.cloudflareinsights.com;
 style-src 'self' 'unsafe-inline';
 img-src 'self' data: https: blob:;
 font-src 'self';
-connect-src 'self' https:;
-media-src 'self';
+connect-src 'self' https: static.cloudflareinsights.com;
+media-src 'none';
 object-src 'none';
 frame-ancestors 'none';
 base-uri 'self';
 form-action 'self';
 ```
 
-**Note**: `connect-src 'self' https:` allows connections to any HTTPS origin. For production, narrow this to your specific API domain(s):
+**Note**: `connect-src 'self' https: static.cloudflareinsights.com` allows connections to any HTTPS origin and Cloudflare Insights. For production, narrow this to your specific API domain(s):
 
 ```
 connect-src 'self' https://api.yourdomain.com
