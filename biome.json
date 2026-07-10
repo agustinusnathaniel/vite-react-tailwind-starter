@@ -20,6 +20,7 @@
       "!src/lib/hooks/use-mobile.*",
       "*.config.ts",
       "!**/*.css",
+      "!**/*.svg",
       "!stats.html",
       "!test-results/*.json",
       "!.agents",
@@ -33,7 +34,7 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true,
+      "preset": "recommended",
       "correctness": {
         "useImageSize": "off"
       },

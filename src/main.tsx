@@ -14,19 +14,19 @@ import { queryClient } from '@/lib/services/constants';
 
 // Create a new router instance
 const router = createRouter({
-  routeTree,
   context: {
     queryClient,
   },
-  defaultPreload: 'intent',
-  scrollRestoration: true,
-  defaultStructuralSharing: true,
+  defaultNotFoundComponent: () => <Page404 />,
   defaultPendingComponent: () => (
     <div className="mx-auto">
       <p>Loading...</p>
     </div>
   ),
-  defaultNotFoundComponent: () => <Page404 />,
+  defaultPreload: 'intent',
+  defaultStructuralSharing: true,
+  routeTree,
+  scrollRestoration: true,
 });
 
 // Register the router instance for type safety
