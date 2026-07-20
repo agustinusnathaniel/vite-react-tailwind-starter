@@ -6,8 +6,8 @@
     "allowJs": false,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "strict": true,
-    "strictNullChecks": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
     "moduleResolution": "bundler",
@@ -24,8 +24,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "types": ["vite-plus/client"],
-    "verbatimModuleSyntax": true,
-    "noUncheckedSideEffectImports": false
+    "verbatimModuleSyntax": true
   },
   "include": ["src"],
   "exclude": ["node_modules"],
