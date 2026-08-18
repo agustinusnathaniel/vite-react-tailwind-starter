@@ -1,0 +1,29 @@
+{
+  "background_color": "#FFFFFF",
+  "dir": "ltr",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/maskable-icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "lang": "en",
+  "name": "Vite React App Template",
+  "prefer_related_applications": false,
+  "short_name": "vite-react-tailwind-starter",
+  "start_url": "/",
+  "theme_color": "#000000"
+}
