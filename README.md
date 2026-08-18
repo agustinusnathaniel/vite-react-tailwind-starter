@@ -192,7 +192,7 @@ Build for production:
 pnpm build
 ```
 
-Output will be in the `dist/` directory.
+Output will be in the `dist/client/` directory.
 
 ### Testing
 
@@ -265,7 +265,7 @@ Routes are defined as files in `src/routes/`. TanStack Router automatically gene
 ### Build Configuration
 
 - **Build command**: `pnpm build`
-- **Output directory**: `dist/`
+- **Output directory**: `dist/client`
 - **Node version**: ^24.11.x
 
 ### Platform-Specific Guides

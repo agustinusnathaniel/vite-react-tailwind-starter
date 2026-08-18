@@ -240,7 +240,8 @@ This template intentionally does not provide:
 
 - 404 page component defined in `src/lib/pages/404/`
 - Used as `defaultNotFoundComponent` in router config
-- Renders when no route matches
+- Renders when no route matches during client-side navigation
+- Static deployments serve `public/404.html` with an HTTP 404 for unknown direct requests
 
 ### Route Preloading
 
@@ -348,7 +349,7 @@ sequenceDiagram
 
 1. **Modern Development Environment**: Developers use Node 24+, modern editors, and Git
 2. **ESM-First**: All code uses ES modules (no CommonJS)
-3. **Client-Side Rendering**: No SSR/SSG (pure SPA)
+3. **Static Prerendering**: TanStack Start prerenders static routes into `dist/client`; parameterized routes require explicit paths
 4. **TypeScript Adoption**: All code is TypeScript (no JavaScript files)
 5. **Component Patterns**: Functional components with hooks (no class components)
 6. **Styling Approach**: Utility-first CSS (Tailwind) with minimal custom CSS
@@ -356,7 +357,7 @@ sequenceDiagram
 ## Future Considerations
 
 Potential enhancements (not currently implemented):
-- SSR/SSG support via TanStack Start
+- Additional explicit prerender paths for parameterized routes
 - More comprehensive component library
 - Form handling integration
 - Internationalization setup

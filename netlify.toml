@@ -1,8 +1,3 @@
-[[redirects]]
-  from="/*"
-  to="/index.html"
-  status=200
-
 [build]
   command = 'pnpm build'
   publish = 'dist/client'
