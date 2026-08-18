@@ -2,7 +2,7 @@ import { ValidateEnv } from '@julr/vite-plugin-validate-env';
 import babel from '@rolldown/plugin-babel';
 import tailwindcss from '@tailwindcss/vite';
 import { devtools } from '@tanstack/devtools-vite';
-import { tanstackRouter } from '@tanstack/router-plugin/vite';
+import { tanstackStart } from '@tanstack/react-start/plugin/vite';
 import react, { reactCompilerPreset } from '@vitejs/plugin-react';
 import checker from 'vite-plugin-checker';
 import { VitePWA, type VitePWAOptions } from 'vite-plugin-pwa';
@@ -50,7 +50,14 @@ export default defineConfig(({ mode }) => {
     plugins: lazyPlugins(() => [
       ValidateEnv(),
       devtools(),
-      tanstackRouter({ autoCodeSplitting: true }),
+      tanstackStart({
+        spa: {
+          enabled: true,
+          prerender: {
+            outputPath: '',
+          },
+        },
+      }),
       react(),
       ...(isReactCompilerEnabled
         ? [
