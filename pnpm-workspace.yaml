@@ -2,6 +2,7 @@ allowBuilds:
   "@tailwindcss/oxide": true
   esbuild: true
   sharp: true
+minimumReleaseAge: 0
 
 overrides:
   "vite": 'catalog:'
