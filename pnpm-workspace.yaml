@@ -9,7 +9,7 @@ overrides:
   "vitest": 'catalog:'
 catalog:
   vite: npm:@voidzero-dev/vite-plus-core@^0.2.9
-  vitest: 4.1.11
+  vitest: 4.1.10
   vite-plus: ^0.2.9
 peerDependencyRules:
   allowAny:
