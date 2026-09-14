@@ -5,12 +5,12 @@ allowBuilds:
 minimumReleaseAge: 0
 
 overrides:
-  "vite": 'catalog:'
-  "vitest": 'catalog:'
+  vite@*: 'catalog:'
+  vitest@*: 'catalog:'
 catalog:
-  vite: npm:@voidzero-dev/vite-plus-core@^0.3.0
-  vitest: 4.1.10
-  vite-plus: ^0.3.0
+  vite: npm:@voidzero-dev/vite-plus-core@0.3.1
+  vitest: 4.1.11
+  vite-plus: 0.3.1
 peerDependencyRules:
   allowAny:
     - vite
@@ -18,3 +18,14 @@ peerDependencyRules:
   allowedVersions:
     vite: '*'
     vitest: '*'
+minimumReleaseAgeExclude:
+  - vite-plus
+  - '@voidzero-dev/*'
+  - oxlint
+  - '@oxlint/*'
+  - oxlint-tsgolint
+  - '@oxlint-tsgolint/*'
+  - oxfmt
+  - '@oxfmt/*'
+  - vitest
+  - '@vitest/*'
