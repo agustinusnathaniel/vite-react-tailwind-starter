@@ -64,7 +64,6 @@
     "vite-plugin-checker": "^0.14.5",
     "vite-plugin-pwa": "^1.3.0",
     "vite-plus": "catalog:",
-    "vitest": "catalog:",
     "web-vitals": "^6.2.1"
   },
   "packageManager": "pnpm@11.8.0",
