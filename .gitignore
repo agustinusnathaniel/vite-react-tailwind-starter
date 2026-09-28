@@ -21,3 +21,4 @@ coverage/
 .tanstack
 .output
 .vercel
+.vitest/
